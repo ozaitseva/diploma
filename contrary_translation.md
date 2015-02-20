@@ -1,6 +1,5 @@
 # Обратное преобразование физического адреса в виртуальный
 
-[ссылка](https://www.dropbox.com/s/o5hehbjnwohibau/virt_adr.jpg?dl=0)
 ![Виртуальный адрес на платформе x86-64](https://www.dropbox.com/s/o5hehbjnwohibau/virt_adr.jpg?dl=0 "Виртуальный адрес на платформе x86-64")
 
 ![Структуры преобразования адресов на платформе x86-64](https://www.dropbox.com/s/3x8y3hnj76bp73t/transl_adr.jpg?dl=0 "Структуры преобразования адресов на платформе x86-64")
