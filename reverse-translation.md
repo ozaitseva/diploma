@@ -1,6 +1,6 @@
 # Обратное преобразование физического адреса в виртуальный
 
-![Виртуальный адрес на платформе x86-64]https://github.com/ozaitseva/diploma/blob/master/images/virt_adr.jpg "Виртуальный адрес на платформе x86-64")
+![Виртуальный адрес на платформе x86-64] (https://github.com/ozaitseva/diploma/blob/master/images/virt_adr.jpg "Виртуальный адрес на платформе x86-64")
 
 ![Структуры преобразования адресов на платформе x86-64](https://github.com/ozaitseva/diploma/blob/master/images/transl_adr.jpg "Структуры преобразования адресов на платформе x86-64")
 
