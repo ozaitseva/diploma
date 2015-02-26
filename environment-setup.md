@@ -28,7 +28,7 @@
 
 1. Создаем хранилище образа виртуальной машины.
 
-       `sudo virsh pool-define-as storage_name dir --target /etc/libvirt/images/`
+        `sudo virsh pool-define-as storage_name dir --target /etc/libvirt/images/`
 
  * `storage_name` - название хранилища;
  * ` /etc/libvirt/images/` - путь к папке.
