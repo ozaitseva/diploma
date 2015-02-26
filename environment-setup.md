@@ -28,38 +28,38 @@
 
 1. Создаем хранилище образа виртуальной машины.
 
-!+: `sudo virsh pool-define-as storage_name dir --target /etc/libvirt/images/`
+        `sudo virsh pool-define-as storage_name dir --target /etc/libvirt/images/`
 
  * `storage_name` - название хранилища;
  * ` /etc/libvirt/images/` - путь к папке.
  
 Проверяем, создалось ли хранилище:
 
-!+: `sudo virsh pool-list --all`
+        `sudo virsh pool-list --all`
 
 Должны увидеть: 
 
-!+: `storage_name не активен нет`
+        `storage_name не активен нет`
 
 Запускаем хранилище:
 
-!+: `sudo virsh pool-start storage_name`
+        `sudo virsh pool-start storage_name`
 
 Указываем, чтобы хранилище запускалось автоматически:
 
-!+: `sudo virsh pool-autostart storage_name`
+        `sudo virsh pool-autostart storage_name`
 
 Проверяем:
 
-!+: `sudo virsh pool-list --all`
+        `sudo virsh pool-list --all`
 
 Должны увидеть: 
 
-!+: `storage_name активен да`
+        `storage_name активен да`
 
 2. Запускаем виртуальную машину с примонтированным ISO-образом будущей операционной системы. Мы будем использовать операционную систему Windows 7 Professional x64 (с установочным образом win7profx64.iso):
 
-!+: `virt-install -n vm_name -r 2048 --vcpus=2 -c ./win7profx64.iso --disk pool=storage_name,size=15,format=qcow2,cache=none --graphics vnc,listen=0.0.0.0`
+        `virt-install -n vm_name -r 2048 --vcpus=2 -c ./win7profx64.iso --disk pool=storage_name,size=15,format=qcow2,cache=none --graphics vnc,listen=0.0.0.0`
 
  * `-n vm_name` - название виртуальной машины;
  * `-r 2048` – объем выделяемой гостевой машине оперативной памяти (Мб);
