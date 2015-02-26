@@ -84,7 +84,7 @@
 
 Для запуска необходимо воспользоваться командой:
 
-        qemu-system-x86_64 -cpu Nehalem -enable-kvm –hda ./win7.img -m 2G
+        virsh start vm_name
 
 # Операции с гостевой виртуальной машиной
 
