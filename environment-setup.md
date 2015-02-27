@@ -100,6 +100,10 @@ _NB: Максимальный размер одного дампа состав�
 Объем оперативной памяти нашей виртуальной машины составляет 2 ГиБ, поэтому вводим следующую команду [4]:
 
         virsh qemu-monitor-command <vm_name> --hmp "pmemsave 0 0x80000000 win7.dump"
+        
+Также получить образ физической памяти и регистров запущенной виртуальной машины можно с помощью команды [5]: 
+
+        virsh dump <vm_name> <file_name> --live --memory-only
 
 ## Создание снэпшота диска
 
@@ -119,3 +123,5 @@ _NB: Максимальный размер одного дампа состав�
 [3] <https://tails.boum.org/contribute/release_process/test/erase_memory_on_shutdown/qemu_pmemsave/>
 
 [4] <http://stackoverflow.com/questions/25479873/how-to-enable-qemu-monitor-console-in-virtual-machine-manager>
+
+[5] <https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Virtualization_Administration_Guide/sect-vish-dump.html>
