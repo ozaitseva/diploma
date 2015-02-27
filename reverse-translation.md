@@ -50,9 +50,7 @@
 ##Литература: 
 [1] Russinovich M., Solomon D., Windows Internals, Fifth Edition ("Внутреннее устройство Windows, часть вторая, шестое издание"), p. 240-271. Microsoft Press, 2014. 
 
-[2] Коньков К.А., Основы организации операционных систем Microsoft Windows, Лекция 9.
-
-URL: http://www.intuit.ru/studies/courses/1089/217/lecture/5601
+[2] Коньков К.А., [Основы организации операционных систем Microsoft Windows, Лекция 9](http://www.intuit.ru/studies/courses/1089/217/lecture/5601).
 
 
 
