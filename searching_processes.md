@@ -16,7 +16,23 @@
 четвертого уровня PML4, а по значениям полей _ThreadListHead.Flink_ и _ThreadListHead.Blink_ виртуальные адреса предыдущего
  и последующего процессов соответственно. Данные поля должны содержать значения, соответствующие адресному процессу ядра.[2]
 
+typedef struct _EPROCESS {
 
++0x000 Pcb _KPROCESS {
+
++0x000 Header DISPATCHER_HEADER
+
++0x010 ProfileListHead LIST_ENTRY
+
++0x018 ULONG DirectoryTableBase
+
+…
+
++0x308 ThreadListHead LIST_ENTRY {
+
++0x000 Flink PLIST_ENTRY; 
+
++0x004 Blink PLIST_ENTRY;
 
 ##Литература:
 
