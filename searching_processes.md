@@ -8,15 +8,42 @@
 ```
 typedef struct _EPROCESS {
 +0x000 Pcb _KPROCESS {
-+0x000     Header DISPATCHER_HEADER;
-+0x010     ProfileListHead LIST_ENTRY;
-+0x018     ULONG DirectoryTableBase;
++0x000     Header DISPATCHER_HEADER{
+union {
+struct{
++0x000 UINT8        Type;
+union {
++0x001 UINT8        TimerControlFlags;
+struct {
++0x001 UINT8        Absolute : 1;              // 0 BitPosition
++0x001 UINT8        Coalescable : 1;           // 1 BitPosition
++0x001 UINT8        KeepShifting : 1;          // 2 BitPosition
++0x001 UINT8        EncodedTolerableDelay : 5; // 3 BitPosition
+       }
++0x001 UINT8        Abandoned;
++0x001 UINT8        Signalling;
+       }
+union {
++0x002 UINT8        ThreadControlFlags;
+struct {
++0x002 UINT8        CpuThrottled : 1;          // 0 BitPosition
++0x002 UINT8        CycleProfiling : 1;        // 1 BitPosition
++0x002 UINT8        CounterProfiling : 1;      // 2 BitPosition
++0x002 UINT8        Reserved : 5;              // 3 BitPosition
+       }
++0x002 UINT8        Hand;
++0x002 UINT8        Size;
+       }
+...
+       }
++0x018     ProfileListHead LIST_ENTRY;
++0x028     UINT64 DirectoryTableBase;
 ...
        }
 ...
 +0x308 ThreadListHead LIST_ENTRY {
 +0x000 Flink PLIST_ENTRY; 
-+0x004 Blink PLIST_ENTRY;
++0x008 Blink PLIST_ENTRY;
 ...
 }
 ```
