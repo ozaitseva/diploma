@@ -1,3 +1,7 @@
+#Криминалистически правильные методы обработки дампов физической памяти операционных систем семейства Windows NT 
+
+#Forensically sound methods of Windows NT volatile memory dump processing
+
 # Введение
 
 ## Актуальность
